@@ -12,7 +12,6 @@
 
 @interface PlayDrop : NSObject <AVAudioPlayerDelegate>{
     AVAudioPlayer *dropPlayer;
-    NSTimer *vibrationTimer;
 }
 
 @property (nonatomic,strong)  id delegate;

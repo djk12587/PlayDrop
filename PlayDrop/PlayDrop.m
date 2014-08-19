@@ -16,8 +16,6 @@
     if ([dropPlayer isPlaying]) {
         [dropPlayer stop];
         dropPlayer = nil;
-        [vibrationTimer invalidate];
-        vibrationTimer = nil;
     }
 
 	NSError *error;
@@ -29,7 +27,6 @@
     }
 	else {
         [dropPlayer play];
-        vibrationTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(vibrate) userInfo:nil repeats:YES];
     }
 }
 
@@ -37,8 +34,6 @@
     if (dropPlayer.isPlaying) {
         [dropPlayer stop];
         dropPlayer = nil;
-        [vibrationTimer invalidate];
-        vibrationTimer = nil;
     }
 }
 
@@ -46,29 +41,16 @@
     return dropPlayer.isPlaying;
 }
 
-- (void) vibrate {
-    double delay = 0.0 * NSEC_PER_SEC;
-    double time = dispatch_time(DISPATCH_TIME_NOW, delay);
-    
-    dispatch_after(time, dispatch_get_main_queue(), ^{
-        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
-    });
-}
-
 #pragma mark - AVAudioPlayer Delegate Methods
 -(void) audioPlayerBeginInterruption:(AVAudioPlayer *)player {
     if ([player isPlaying]) {
         [player stop];
         player = nil;
-        [vibrationTimer invalidate];
-        vibrationTimer = nil;
     }
 }
 
 - (void) audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     player = nil;
-    [vibrationTimer invalidate];
-    vibrationTimer = nil;
 }
 
 - (void) audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
