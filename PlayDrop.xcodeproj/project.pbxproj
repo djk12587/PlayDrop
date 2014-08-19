@@ -16,6 +16,7 @@
 		D56A823819A3C74D004421F4 /* PlayDropTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D56A823719A3C74D004421F4 /* PlayDropTests.m */; };
 		D56A824519A3C793004421F4 /* PlayDrop+Shared.m in Sources */ = {isa = PBXBuildFile; fileRef = D56A824219A3C793004421F4 /* PlayDrop+Shared.m */; };
 		D56A824619A3C793004421F4 /* PlayDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = D56A824419A3C793004421F4 /* PlayDrop.m */; };
+		D56A824819A3C878004421F4 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D56A824719A3C878004421F4 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		D56A824219A3C793004421F4 /* PlayDrop+Shared.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "PlayDrop+Shared.m"; sourceTree = "<group>"; };
 		D56A824319A3C793004421F4 /* PlayDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayDrop.h; sourceTree = "<group>"; };
 		D56A824419A3C793004421F4 /* PlayDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayDrop.m; sourceTree = "<group>"; };
+		D56A824719A3C878004421F4 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D56A824819A3C878004421F4 /* AudioToolbox.framework in Frameworks */,
 				D56A821C19A3C74D004421F4 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,6 +104,7 @@
 		D56A821A19A3C74D004421F4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D56A824719A3C878004421F4 /* AudioToolbox.framework */,
 				D56A821B19A3C74D004421F4 /* Foundation.framework */,
 				D56A822919A3C74D004421F4 /* XCTest.framework */,
 				D56A822C19A3C74D004421F4 /* UIKit.framework */,
